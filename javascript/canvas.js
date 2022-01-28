@@ -5,11 +5,12 @@ class HangmanCanvas {
   }
 
   createBoard() {
-    // ... your code goes here
+    this.context.clearRect(0,0,this.context.canvas.width,this.context.canvas.heigth);
+    drawLines();
   }
 
   drawLines() {
-    // ... your code goes here
+
   }
 
   writeCorrectLetter(index) {
@@ -32,3 +33,9 @@ class HangmanCanvas {
     // ... your code goes here
   }
 }
+
+let hangmanCanvas = new HangmanCanvas('hello');
+
+hangmanCanvas.createBoard();
+
+const btnStart = document.querySelector('#start-game-button');
